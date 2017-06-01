@@ -18,6 +18,8 @@ module Viewpoint::EWS::Types
       legacy_free_busy_status: [:legacy_free_busy_status, :text],
       my_response_type:   [:my_response_type, :text],
       u_i_d:        [:u_i_d, :text],
+      web_client_read_form_query_string: [:web_client_read_form_query_string, :text],
+      web_client_edit_form_query_string: [:web_client_edit_form_query_string, :text],
       organizer: [:organizer, :elems, 0, :mailbox, :elems],
       optional_attendees: [:optional_attendees, :elems ],
       required_attendees: [:required_attendees, :elems ],
