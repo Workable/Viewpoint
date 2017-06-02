@@ -22,6 +22,17 @@ module Viewpoint::EWS::Types
   # @see http://msdn.microsoft.com/en-us/library/aa565036.aspx MSDN docs
   # @todo Design a Class method that resolves to an Array of MailboxUsers
   class Attendee < MailboxUser
+
+    ATTENDEE_KEY_PATHS = {
+      response_type: [:response_type, :text]
+    }
+
+    private
+
+    def key_paths
+      @key_paths ||= super.merge(ATTENDEE_KEY_PATHS)
+    end
+
   end # Attendee
 
 end # Viewpoint::EWS::Types
